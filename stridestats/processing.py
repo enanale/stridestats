@@ -29,6 +29,9 @@ class DataProcessor:
                 
                 # Flatten the fields we care about
                 # Strava API returns a lot, let's pick core ones for our goals
+                start_latlng = data.get("start_latlng", [])
+                end_latlng = data.get("end_latlng", [])
+                
                 flat_activity = {
                     "id": data.get("id"),
                     "name": data.get("name"),
@@ -41,7 +44,16 @@ class DataProcessor:
                     "elapsed_time": data.get("elapsed_time"),
                     "total_elevation_gain": data.get("total_elevation_gain"),
                     "average_speed": data.get("average_speed"),
-                    "max_speed": data.get("max_speed")
+                    "max_speed": data.get("max_speed"),
+                    # Location and Map Data
+                    "start_lat": start_latlng[0] if len(start_latlng) == 2 else None,
+                    "start_lng": start_latlng[1] if len(start_latlng) == 2 else None,
+                    "end_lat": end_latlng[0] if len(end_latlng) == 2 else None,
+                    "end_lng": end_latlng[1] if len(end_latlng) == 2 else None,
+                    "map_polyline": data.get("map", {}).get("summary_polyline"),
+                    "location_city": data.get("location_city"),
+                    "location_state": data.get("location_state"),
+                    "location_country": data.get("location_country"),
                 }
                 activities.append(flat_activity)
 

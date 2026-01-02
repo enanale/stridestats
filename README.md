@@ -5,7 +5,8 @@ StrideStats is a **local-first, data-sovereign** analysis tool designed for data
 ## Why StrideStats?
 
 - **Data Sovereignty**: Your fitness history belongs to you. Keep a local backup in raw JSON and optimized Parquet formats.
-- **Deep Insights**: Move beyond the basic charts. use Jupyter Notebooks to perform custom analysis on pace, cadence, and splits.
+- **Deep Insights**: Move beyond the basic charts. Use Jupyter Notebooks to perform custom analysis on pace, cadence, and splits.
+- **Geographic Exploration**: Use interactive maps to explore your running routes with heatmap visualizations and polyline route decoding.
 - **Privacy First**: Sensitive API tokens stay in your local `.env`, and your detailed workout data never leaves your machine.
 
 ## Quick Start
@@ -58,8 +59,9 @@ python main.py process
 ```
 
 **Step 4: Analyze**
-Launch Jupyter or open the included notebook in VS Code:
-- Path: `notebooks/01_Activities_Overview.ipynb`
+Launch Jupyter or open the included notebooks in VS Code:
+- **Overview**: `notebooks/01_Activities_Overview.ipynb` (Trends, frequency, mileage).
+- **Maps**: `notebooks/02_Maps_and_Locations.ipynb` (Start location heatmaps, route plotting).
 - Kernel: Select **Python (StrideStats)**
 
 ## Project Structure

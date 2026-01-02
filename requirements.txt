@@ -8,3 +8,5 @@ jupyterlab
 ipykernel
 jupyter
 notebook
+folium
+polyline
