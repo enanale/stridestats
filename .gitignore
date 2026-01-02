@@ -1,0 +1,23 @@
+# Credentials
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+
+# Data (Protect raw and processed output)
+data/raw/
+data/processed/
+*.parquet
+*.csv
+
+# Jupyter
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# OS
+.DS_Store
+Thumbs.db

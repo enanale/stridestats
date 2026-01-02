@@ -1,0 +1,10 @@
+pandas
+requests
+python-dotenv
+pyarrow
+matplotlib
+seaborn
+jupyterlab
+ipykernel
+jupyter
+notebook
