@@ -62,6 +62,8 @@ python main.py process
 Launch Jupyter or open the included notebooks in VS Code:
 - **Overview**: `notebooks/01_Activities_Overview.ipynb` (Trends, frequency, mileage).
 - **Maps**: `notebooks/02_Maps_and_Locations.ipynb` (Start location heatmaps, route plotting).
+- **Routes**: `notebooks/04_Route_Gallery.ipynb` (Small multiples grid).
+- **Art**: `notebooks/05_Route_Art.ipynb` (Generative Bloom, DNA, and Spiral views).
 - Kernel: Select **Python (StrideStats)**
 
 ## Project Structure

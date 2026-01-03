@@ -10,3 +10,4 @@ jupyter
 notebook
 folium
 polyline
+scikit-learn

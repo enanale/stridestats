@@ -40,6 +40,58 @@
   - Loads locally stored data.
   - **Visualization**: Generates a chart showing the number of activities per year, broken down by Activity Type (Run, Ride, Swim, etc.).
 
+### 4.3 Advanced Analysis Modules (Proposed)
+These modules extend the basic analysis to provide deeper insights into performance, behavior, and geography.
+
+#### 4.3.1 Performance & Physiology
+- **Cumulative Progress Comparison**:
+  - Interactive chart comparing cumulative distance and elevation gain for the current year vs. previous years.
+  - Helps answer: "Am I ahead or behind my mileage from last year?"
+- **Intensity Distribution**:
+  - Histograms showing the distribution of Average Heart Rate and Average Speed across activities.
+  - **Zone Analysis**: Classification of activities into low/medium/high intensity buckets based on user-defined thresholds.
+- **Taper & Load Tracking**:
+  - Rolling 7-day and 30-day average distance/duration to visualize training volume and rest weeks.
+
+#### 4.3.2 Geospatial Intelligence
+- **Global Activity Heatmap**:
+  - A single interactive map overlaying all activity poly-lines.
+  - **Metric Coloring**: Option to color paths by Speed, Heart Rate, or Grade (e.g., fast sections in red, slow in blue).
+- **Route "Small Multiples" (Implemented)**:
+  - A faceted grid display showing the geometry of every individual run/ride as a standalone shape, sorted by date or distance.
+  - Useful for visualizing the variety of routes taken.
+  - Located in: `notebooks/04_Route_Gallery.ipynb`
+- **Territory Explorer**:
+  - Analysis of unique "tiles" or grid squares visited (similar to VeloViewer).
+
+#### 4.3.3 Fun & Gamification
+- **The "Epic" Leaderboard**:
+  - Automatic ranking of top 10 "toughest" activities based on a custom score (Distance * Elevation Gain).
+- **Eddington Number**:
+  - Calculation of the Eddington Number for Cycling and Running (e.g., "I have run E miles at least E times").
+- **Consistency Calendar**:
+  - A "GitHub-style" contribution heatmap showing daily activity frequency and streak analysis.
+  - **Day-of-Week Split**: Pie chart showing "Weekend Warrior" vs. "Weekday Worker" volume distribution.
+
+#### 4.3.4 Artistic & Generative Visualizations (New)
+For athletes with large datasets (1000+ activities), these views transform raw data into "Data Art."
+
+- **The "Route Bloom" (Composite Overlay)**:
+  - All ~2,000 routes are centered at a single origin (0,0) and plotted with very high transparency (1-2%).
+  - Result: A ghostly, glowing "nebulous" shape that reveals the statistical center and extreme reaches of the athlete's exploration.
+- **The "DNA Strand" (Chronological Strip)**:
+  - A very long, thin high-resolution image where all 2,000 routes are plotted side-by-side as minimal sparklines.
+  - Sorting by date creates a vertical or horizontal "fingerprint" of your athletic life.
+- **The "Time Spiral"**:
+  - Routes are arranged along a mathematical spiral (Archimedean) based on their timestamp.
+  - Helps visualize the density of activity over years in a single circular composition.
+- **Route "Similarity Clusters" (The Galaxy Map)**:
+  - Using basic features (distance, elevation, aspect ratio), routes are positioned in a 2D space.
+  - Cluster "islands" emerge: one for "short lunch runs," another for "mountain loop rides," etc.
+- **The "Pace Heat" Mosaic**:
+  - A massive grid of every route shape, color-coded by relative intensity or average speed.
+  - Result: A colorful tapestry showing "blocks" of peak performance seasons.
+
 ## 5. Non-Functional Requirements
 - **Privacy**: All data remains on the user's local machine.
 - **Rate Limiting**: Importer must respect Strava API rate limits:
